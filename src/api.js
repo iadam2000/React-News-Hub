@@ -2,15 +2,18 @@ import axios from "axios";
 
 const apiClient = axios.create({
     baseURL: "https://backend-project-u7dc.onrender.com/api",
-    timeout: 1000,
+    timeout: 50000,
 });
 
-export const fetchArticleList = async () => {
+export const fetchHandler = async (endpoint) => {
     try {
-        const response = await apiClient.get("/articles");
-        return response.data.articles;
+        const response = await apiClient.get(endpoint);
+        return response.data;
     } catch (error) {
-        console.error("Error fetching articles:", error);
-        throw error;
+        if (error.response) {
+            throw new Error(error.response.data.msg); 
+        } else {
+            throw new Error("Error fetching articles");
+        }
     }
 };
