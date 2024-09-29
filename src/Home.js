@@ -1,26 +1,11 @@
-import { fetchArticleList } from './api';
-import { useState, useEffect } from 'react';
 import './index.css';
 import ArticleList from './ArticleList';
+import useFetch from './useFetch';
 
 const Home = () => {
 
-    const [articles, setArticles] = useState([]);
-    const [isLoading, setIsLoading] = useState(true);
-
-    useEffect(() => {
-        const fetchArticles = async () => {
-            try {
-                const articlesData = await fetchArticleList();
-                setArticles(articlesData);
-                setIsLoading(false);
-            } catch (error) {
-                console.error("Error caught:", error);
-            }
-        };
-        fetchArticles();
-    }, []);
-
+    const { isLoading, data, error } = useFetch('/articles');
+    
     if (isLoading) {
         return (
             <p>
@@ -31,7 +16,8 @@ const Home = () => {
 
     return (
         <div className="home">
-            <ArticleList articles={articles} />
+            {error && <div>{error}</div>}
+            {data.articles && <ArticleList articles={data.articles} />}
         </div>
     );
 };
