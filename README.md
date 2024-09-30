@@ -4,7 +4,7 @@
 
 ## General Info
 
-**React News Hub** is a full-stack application that allows users to read, comment on, and interact with news articles. The front-end is built with React, and it connects to a custom-built back-end API for managing articles and comments. The app is responsive, providing a seamless experience across desktop and mobile devices.
+**React News Hub** is a full-stack application that acts similarly to Reddit. It allows users to read, comment on, and interact with news articles. The front-end is built with React, and it connects to a custom-built back-end API for managing articles and comments. The app is responsive, providing a seamless experience across desktop and mobile devices.
 
 ## Features
 - View All Articles: Displays an array of all articles, with sorting and filtering options by author, topic, and other parameters.
