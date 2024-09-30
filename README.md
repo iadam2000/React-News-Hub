@@ -8,6 +8,7 @@
 
 ## Features
 - View All Articles: Displays an array of all articles, with sorting and filtering options by author, topic, and other parameters.
+  
 - View Individual Articles: Fetches and displays a specific article by its ID, including all relevant details such as title, body, votes, and associated comments.
 - View Topics: Displays all available topics for articles, each with a description.
 - Comments Section: View comments associated with an article, ordered by most recent first.
