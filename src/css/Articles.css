@@ -1,0 +1,19 @@
+.article-preview {
+    padding: 10px 16px;
+    margin: 20px 0;
+    border-bottom: 1px solid #fafafa;
+}
+
+.article-preview a {
+    text-decoration: none;
+}
+
+.article-preview:hover {
+    box-shadow: 1px 3px 5px rgba(0, 0, 0, 0.1);
+}
+
+.article-preview h2 {
+    font-size: 20px;
+    color: #fffffe;
+    margin-bottom: 8px;
+}

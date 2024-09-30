@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom';
 import './index.css';
+import "./css/Articles.css";
 
 const ArticleList = ({ articles }) => {
     return (
