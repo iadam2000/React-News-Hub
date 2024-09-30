@@ -1,4 +1,4 @@
-import './index.css';
+import './css/index.css';
 import ArticleList from './ArticleList';
 import useFetch from './useFetch';
 
@@ -8,7 +8,7 @@ const Home = () => {
     
     if (isLoading) {
         return (
-            <p>
+            <p className='spinner'>
                 Loading
             </p>
         );

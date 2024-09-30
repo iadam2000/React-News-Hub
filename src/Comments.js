@@ -6,7 +6,7 @@ const Comments = ({ id }) => {
     const comments = data.comments;
     return (
         <div className="comments-container">
-            {isLoading && <div>Loading...</div>}
+            {isLoading && <div className='spinner'>Loading...</div>}
             {error && <div>{error}</div>}
             {comments && comments.map(comment => (
                 <div key={comment.comment_id} className="comment-card">

@@ -1,3 +1,5 @@
+import "./css/Endpoints.css";
+
 const Endpoints = () => {
     const docs = {
         "GET /api": {

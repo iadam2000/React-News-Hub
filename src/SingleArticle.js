@@ -10,7 +10,7 @@ const SingleArticle = () => {
     const article = data.article
     return (
         <div className="Single-article">
-            {isLoading && <div>Loading...</div>}
+            {isLoading && <div className='spinner'>Loading...</div>}
             {error && <div>{error}</div>}
             {data.article && (
                 <div className='single-article-view'>
