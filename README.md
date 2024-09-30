@@ -7,10 +7,15 @@
 **React News Hub** is a full-stack application that allows users to read, comment on, and interact with news articles. The front-end is built with React, and it connects to a custom-built back-end API for managing articles and comments. The app is responsive, providing a seamless experience across desktop and mobile devices.
 
 ## Features
-- Display a list of articles with filtering options.
-- View individual articles with detailed content and comments.
-- Post and read comments on articles.
-- Integration with back-end API for dynamic content fetching.
+- View All Articles: Displays an array of all articles, with sorting and filtering options by author, topic, and other parameters.
+- View Individual Articles: Fetches and displays a specific article by its ID, including all relevant details such as title, body, votes, and associated comments.
+- View Topics: Displays all available topics for articles, each with a description.
+- Comments Section: View comments associated with an article, ordered by most recent first.
+- Post Comments: Allows users to post comments on articles, with username and body fields.
+- Vote on Articles: Updates an article's vote count by upvoting or downvoting.
+- Delete Comments: Deletes specific comments by their ID.
+- View Users: Displays a list of users, including username, real name, and avatar.
+- RESTful API Integration: Fully integrated with a back-end API, fetching and displaying dynamic data in real time.
 
 ## Back-end Repository
 
