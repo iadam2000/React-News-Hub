@@ -13,7 +13,7 @@ export const fetchHandler = async (endpoint) => {
         if (error.response) {
             throw new Error(error.response.data.msg); 
         } else {
-            throw new Error("Error fetching articles");
+            throw new Error("Error fetching data");
         }
     }
 };
