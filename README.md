@@ -1,6 +1,6 @@
 # React News Hub
 
-**Live Site**: [Link to deployed version]
+**Live Site**: [coming-soon]
 
 ## General Info
 
@@ -28,3 +28,31 @@ To run the app locally, follow these steps:
 
    ```bash
    git clone <repo-url>
+   ```
+   
+2. Navigate into the project directory:
+
+```bash
+   cd react-news-hub
+   ```
+
+3. Install the necessary dependencies:
+
+```bash
+ npm install
+   ```
+
+4. Run the application:
+
+```bash
+  npm start
+   ```
+
+5. Open your browser and visit:
+
+```bash
+   http://localhost:3000
+   ```
+
+## Additional Information
+This portfolio project was created as part of a Digital Skills Bootcamp in Software Engineering provided by Northcoders.
