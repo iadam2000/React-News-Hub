@@ -29,6 +29,18 @@ export const patchHandler = async (endpoint, body) => {
             throw new Error("Error updating data");
         }
     }
-}
+};
 
+export const postHandler = async (endpoint, body) => {
+    try {
+        const response = await apiClient.post(endpoint, body);
+        return response.data;
+    } catch (error) {
+        if (error.response) {
+            throw new Error(error.response.data.msg);
+        } else {
+            throw new Error("Error updating data");
+        }
+    }
+}
 
