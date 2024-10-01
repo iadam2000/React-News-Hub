@@ -1,8 +1,10 @@
 import useFetch from './useFetch';
 import './css/Comments.css';
+import { useEffect } from 'react';
 
 const Comments = ({ id }) => {
-    const { data, error, isLoading } = useFetch(`/articles/${id}/comments`);
+
+    const { data, error, isLoading } = useFetch(`/articles/${id}/comments`, [id]);
     const comments = data.comments;
     return (
         <div className="comments-container">

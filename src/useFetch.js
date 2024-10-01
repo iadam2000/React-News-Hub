@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import { fetchHandler } from './api';
 
-const useFetch = (url) => {
+const useFetch = (url, dependencies = []) => {
 
     const [data, setData] = useState([]);
     const [isLoading, setIsLoading] = useState(true);
@@ -28,7 +28,7 @@ const useFetch = (url) => {
         };
         fetchData();
         return () => { abortController.abort(); };
-    }, [url]);
+    }, [url, ...dependencies]);
 
     return { isLoading, data, error };
 
