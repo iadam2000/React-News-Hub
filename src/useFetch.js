@@ -28,7 +28,7 @@ const useFetch = (url, dependencies = []) => {
         };
         fetchData();
         return () => { abortController.abort(); };
-    }, [url, ...dependencies]);
+    }, [url, ...dependencies]); // eslint-disable-line react-hooks/exhaustive-deps
 
     return { isLoading, data, error };
 
