@@ -1,6 +1,5 @@
 import useFetch from './useFetch';
 import './css/Comments.css';
-import { useEffect } from 'react';
 
 const Comments = ({ id }) => {
 

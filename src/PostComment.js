@@ -5,15 +5,20 @@ const PostComment = ({ id }) => {
 
     const [comment, setComment] = useState('');
 
-    const handleSubmit = (e) => {
+    const handleSubmit = async (e) => {
 
         const endpoint = `/articles/${id}/comments`;
         const body = {
             "username": "cooljmessy",
             "body": comment
         };
-
-            postHandler(endpoint, body)
+        
+        e.preventDefault();
+        await postHandler(endpoint, body).then(data => {
+            setTimeout(() => {
+                window.location.reload();  // Refresh the page after a delay
+            }, 0);
+        })
                 
     };
 
@@ -35,3 +40,4 @@ const PostComment = ({ id }) => {
 };
 
 export default PostComment;
+
