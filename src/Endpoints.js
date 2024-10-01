@@ -179,17 +179,29 @@ const Endpoints = () => {
             <h2>API Endpoints</h2>
             <ul>
                 {Object.entries(docs).map(([endpoint, info]) => (
+
                     <li key={endpoint}>
+
                         <h5 style={{ marginTop: '10px', marginBottom: '10px' }}>{endpoint}</h5>
                         <p>{info.description}</p>
                         {info.queries && (
                             <div style={{ marginTop: '10px' }}>
                                 Queries: {info.queries.join(", ")}
                             </div>
+                        )}  
+                        {info.requestBody && (
+                            <div>
+                                <h5>Request Body:</h5>
+                                <pre>{JSON.stringify(info.requestBody, null, 2)}</pre>
+                            </div>
                         )}
+                        
+
                         <h5>Example Response:</h5>
                         <pre>{JSON.stringify(info.exampleResponse, null, 2)}</pre>
+
                     </li>
+
                 ))}
             </ul>
         </div>

@@ -2,6 +2,7 @@ import { useParams } from 'react-router-dom';
 import useFetch from './useFetch';
 import Comments from './Comments';
 import "./css/Single-Article.css";
+import Vote from './Vote';
 
 const SingleArticle = () => {
 
@@ -21,8 +22,10 @@ const SingleArticle = () => {
                         <p><strong>Author:</strong> {article.author}</p>
                         <p><strong>Topic:</strong> {article.topic}</p>
                         <p><strong>Created at:</strong> {new Date(article.created_at).toLocaleDateString()}</p>
-                        <p><strong>Votes:</strong> {article.votes}</p>
                     </div>
+                    <Vote id={article.article_id} initialVotes={article.votes} />
+
+                    
                     <Comments id={article.article_id} />
                 </div>)}
         </div>
