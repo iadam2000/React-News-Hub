@@ -44,3 +44,15 @@ export const postHandler = async (endpoint, body) => {
     }
 }
 
+export const deleteHandler = async (endpoint) => {
+    try {
+        const response = await apiClient.delete(endpoint);
+        return response.data;
+    } catch (error) {
+        if (error.response) {
+            throw new Error(error.response.data.msg);
+        } else {
+            throw new Error("Error Deleting data");
+        }
+    }
+}
