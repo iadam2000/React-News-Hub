@@ -4,10 +4,9 @@ import "./css/Navbar.css";
 const Navbar = () => {
     return (
         <nav className="navbar">
-            <h1>News Project</h1>
+            <Link to="/"><h1>ArticleX</h1></Link>
             <div className="links">
                 <Link to="/">Home</Link>
-                <Link to="/create">New Article</Link>
                 <Link to="/endpoints">Endpoints</Link>
             </div>
         </nav>
