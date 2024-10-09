@@ -1,8 +1,10 @@
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Navbar from './Navbar';
 import Home from './Home';
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import ArticleList from './ArticleList';
 import SingleArticle from './SingleArticle';
 import Endpoints from './Endpoints';
+import TopicArticles from './TopicArticles'; // New component for topic articles
 
 function App() {
   return (
@@ -10,23 +12,12 @@ function App() {
       <div className="App">
         <Navbar />
         <div className="content">
-
-          <Switch>
-
-            <Route exact path='/'>
-              <Home />
-            </Route>
-
-            <Route path='/endpoints'>
-              <Endpoints />
-            </Route>
-
-            <Route path='/articles/:id'>
-              <SingleArticle />
-            </Route>
-
-          </Switch>
-
+          <Routes>
+            <Route path='/' element={<Home />} />
+            <Route path='/endpoints' element={<Endpoints />} />
+            <Route path='/articles/:id' element={<SingleArticle />} />
+            <Route path='/topics/:slug' element={<TopicArticles />} /> {/* Route for topic articles */}
+          </Routes>
         </div>
       </div>
     </Router>
