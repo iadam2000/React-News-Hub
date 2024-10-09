@@ -1,7 +1,6 @@
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Navbar from './Navbar';
 import Home from './Home';
-import ArticleList from './ArticleList';
 import SingleArticle from './SingleArticle';
 import Endpoints from './Endpoints';
 import TopicArticles from './TopicArticles'; // New component for topic articles
