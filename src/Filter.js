@@ -6,11 +6,12 @@ function Filter({ topics }) {
     const navigate = useNavigate();
 
     const handleSelectChange = (event) => {
-        const selectedValue = event.target.value;
-        setSelectedTopic(selectedValue);
+        console.log("Clicked")
+       // const selectedValue = event.target.value;
+        setSelectedTopic(event.target.value);
 
-        if (selectedValue) {
-            navigate(`/topics/${selectedValue.toLowerCase()}`);
+        if (event.target.value) {
+            navigate(`/articles?topic=${event.target.value}`);
         }
     };
 

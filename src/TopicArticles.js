@@ -1,10 +1,19 @@
 import React, { useEffect, useState } from 'react';
-import { useParams } from 'react-router-dom';
+import { useParams, useLocation } from 'react-router-dom';
 import { fetchHandler } from './api';
 import ArticleList from './ArticleList';
+import Navbar from './Navbar';
 
 const TopicArticles = () => {
-    const { slug } = useParams();
+
+    //Extract topic from URL
+    const location = useLocation(); 
+    const query = new URLSearchParams(location.search);
+    const topic = query.get('topic');
+    const sort = query.get('sort_by');
+    const order = query.get('order');
+
+
     const [articles, setArticles] = useState([]);
     const [error, setError] = useState(null);
     const [isLoading, setIsLoading] = useState(true);
@@ -13,7 +22,7 @@ const TopicArticles = () => {
         const fetchArticles = async () => {
             try {
                 setIsLoading(true);
-                const response = await fetchHandler(`/articles?topic=${slug}`);
+                const response = await fetchHandler(`/articles?topic=${topic}`);
                 setArticles(response.articles);
             } catch (err) {
                 setError(err.message);
@@ -23,10 +32,10 @@ const TopicArticles = () => {
         };
 
         fetchArticles();
-    }, [slug]);
+    }, [topic]);
 
     if (isLoading) {
-        return <div>Loading articles about {slug}...</div>;
+        return <div>Loading articles about {topic}...</div>;
     }
 
     if (error) {
@@ -35,7 +44,8 @@ const TopicArticles = () => {
 
     return (
         <div className="topic-articles">
-            <h1>Articles about {slug}</h1>
+            <Navbar />
+            <h1>Articles about {topic}</h1>
             {articles.length === 0 ? (
                 <p>No articles found for this topic.</p>
             ) : (
