@@ -25,6 +25,11 @@ const ArticleList = ({ articles }) => {
                         <Link to={`/articles/${article.article_id}`}>
                             <h2>{article.title}</h2>
                             <p>Written by: {article.author}</p>
+                            <p>Topic: {article.topic}</p>
+                            <p>Published on: {new Date(article.created_at).toLocaleDateString()}</p>
+                            <p>Votes: {article.votes}</p>
+                            <p>Comment Count: {article.comment_count}</p>
+                            <p>{article.body}</p>
                         </Link>
                     </div>
                 ))
