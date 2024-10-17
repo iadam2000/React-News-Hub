@@ -9,6 +9,7 @@
     border: 2px solid #ffffff;
     width: fit-content;
     margin-top: 20px;
+    max-height: 100px;
 }
 
 .votes-display {

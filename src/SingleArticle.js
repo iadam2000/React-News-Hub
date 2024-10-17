@@ -4,6 +4,7 @@ import Comments from './Comments';
 import "./css/Single-Article.css";
 import Vote from './Vote';
 import PostComment from './PostComment';
+import Navbar from './Navbar';
 
 const SingleArticle = () => {
 
@@ -17,6 +18,7 @@ const SingleArticle = () => {
             {error && <div>{error}</div>}
             {data.article && (
                 <div className='single-article-view'>
+                    <Navbar/>
                     <h2>{article.title}</h2>
                     <p>{article.body}</p>
                     <img src={article.article_img_url} alt={article.title} />

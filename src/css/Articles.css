@@ -1,7 +1,13 @@
 .article-preview {
-    padding: 10px 16px;
-    margin: 20px 0;
-    border-bottom: 1px solid #fafafa;
+    margin: 30px;
+    background: linear-gradient(to right,
+            rgb(4, 151, 184),
+            rgb(27, 175, 27),
+            rgb(219, 219, 62),
+            rgb(230, 180, 86),
+            rgb(231, 105, 126));
+    padding: 0.15rem;
+    border-radius: 30px;
 }
 
 .article-preview a {
@@ -9,11 +15,22 @@
 }
 
 .article-preview:hover {
-    box-shadow: 1px 3px 5px rgba(0, 0, 0, 0.1);
+    box-shadow: 1px 3px 5px rgba(255, 0, 0, 0.1);
 }
 
 .article-preview h2 {
     font-size: 20px;
-    color: #fffffe;
+    color: #000000;
     margin-bottom: 8px;
+}
+
+.article-content {
+    background-color: white;
+    border-radius: 25px;
+    padding: 1.2rem 1.5rem;
+}
+
+.vote-and-image {
+    display: flex;
+    justify-content: space-between;
 }
