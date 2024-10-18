@@ -2,6 +2,7 @@ import useFetch from './useFetch';
 import './css/Comments.css';
 import { useState, useEffect } from 'react';
 import { deleteHandler } from './api';
+import { timeSincePosted } from './api';
 
 const Comments = ({ id }) => {
 
@@ -39,12 +40,12 @@ const Comments = ({ id }) => {
             {error && <div>{error}</div>}
             {comments && comments.map(comment => (
                 <div key={comment.comment_id} className="comment-card">
-                    <p>{comment.body}</p>
                     <div className="comment-details">
                         <p><strong>Author:</strong> {comment.author}</p>
                         <p><strong>Votes:</strong> {comment.votes}</p>
-                        <p><strong>Created at:</strong> {new Date(comment.created_at).toLocaleString()}</p>
+                        <p><strong>Created at:</strong> {timeSincePosted(comment.created_at)}</p>
                     </div>
+                    <p>{comment.body}</p>
                     <button onClick={(e) => handleSubmit(comment.comment_id, e)}>Delete</button>
                 </div>
             ))}
