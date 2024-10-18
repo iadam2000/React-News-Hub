@@ -1,0 +1,72 @@
+.topic-selector {
+    margin: 30px;
+    padding: 1.2rem 1.5rem;
+    border-radius: 30px;
+    display: flex;
+    justify-content: center;
+    /* Centre the content horizontally */
+    align-items: center;
+    /* Centre the content vertically */
+}
+
+.select-wrapper {
+    width: 48%;
+    position: relative;
+    padding: 3px;
+    margin: 0 10px;
+    /* Adjust margins to create space between dropdowns */
+}
+
+select {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: none;
+    border-radius: 25px;
+    color: #000;
+    transition: border-color 0.3s;
+    position: relative;
+    z-index: 1;
+}
+
+.select-wrapper::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: 25px;
+    background: linear-gradient(to right,
+            #2c3e50,
+            #34495e,
+            #4a4a4a,
+            #c0392b,
+            #3d9970);
+    z-index: 0;
+    padding: 4px;
+}
+
+select:focus {
+    outline: none;
+}
+
+label {
+    font-size: 14px;
+    margin-bottom: 5px;
+    display: block;
+    color: #000;
+}
+
+@media (max-width: 768px) {
+    .topic-selector {
+        flex-direction: column;
+        align-items: center;
+        /* Centre items vertically in column layout */
+    }
+
+    .select-wrapper {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+}

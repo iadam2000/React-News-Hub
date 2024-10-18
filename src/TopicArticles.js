@@ -27,7 +27,6 @@ const TopicArticles = () => {
     return (
         <div className="topic-articles">
             <Navbar />
-            <h1>Articles about {topic}</h1>
             {articles.length === 0 ? (
                 <p>No articles found for this topic.</p>
             ) : (

@@ -1,6 +1,4 @@
 .single-article-view {
-    padding: 20px;
-    margin: 20px auto;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(35, 17, 71, 0.1);
 }
@@ -17,6 +15,10 @@
     margin-bottom: 15px;
     margin-top: 15px;
     margin-right: 20px;
+}
+
+.content {
+    margin:20px; 
 }
 
 @media (min-width: 768px) {
