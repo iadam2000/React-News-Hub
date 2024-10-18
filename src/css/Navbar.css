@@ -1,13 +1,22 @@
 .navbar {
-    padding: 20px;
     display: flex;
     align-items: center;
     margin: 0 auto;
-    border-bottom: 1px solid #f2f2f2;
+    border-bottom: 3px solid #000000;
 }
 
 .navbar h1 {
-    color: #000000;
+    font-size: 3em;
+    background: linear-gradient(to right,
+            rgb(4, 151, 184),
+            rgb(27, 175, 27),
+            rgb(219, 219, 62),
+            rgb(230, 180, 86),
+            rgb(231, 105, 126));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-fill-color: transparent;
 }
 
 .navbar .links {
@@ -16,7 +25,6 @@
 
 .navbar a {
     margin-left: 16px;
-    padding: 6px;
     text-decoration: none;
 }
 
