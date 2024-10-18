@@ -15,8 +15,10 @@ function Filter({ topics }) {
     };
 
     const handleSelectChangeOrder = (event) => {
+
         const sortBy = event.target.value.split("-")[0];
         const order = event.target.value.split("-")[1];
+        setSelectedOrder(order);
 
         if (event.target.value) {
             navigate(`/articles?topic=${selectedTopic}&order=${order}&sort_by=${sortBy}`);

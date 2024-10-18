@@ -1,5 +1,4 @@
 import { createBrowserRouter, createRoutesFromElements, Route, RouterProvider } from 'react-router-dom';
-import Navbar from './Navbar';
 import Home from './Home';
 import SingleArticle from './SingleArticle';
 import Endpoints from './Endpoints';
@@ -14,7 +13,7 @@ const myRouter = createBrowserRouter(createRoutesFromElements(
   </Route>
 ));
 
-function App() {
+function App() {  
   return (
     <RouterProvider router={myRouter} />
   );
