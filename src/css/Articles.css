@@ -33,6 +33,27 @@
 .vote-and-image {
     display: flex;
     justify-content: space-between;
+    align-items: center;
+    /* Aligns items vertically in the center */
+}
+
+/* Media query for smaller screens */
+@media (max-width: 600px) {
+    .vote-and-image {
+        flex-direction: column;
+        /* Stacks elements vertically */
+        align-items: flex-start;
+        /* Aligns items to the start */
+    }
+
+    .vote-and-image img {
+        margin-top: 10px;
+        /* Adds spacing between vote and image */
+        width: 100%;
+        /* Ensures image is responsive */
+        height: auto;
+        /* Maintains aspect ratio */
+    }
 }
 
 p {
