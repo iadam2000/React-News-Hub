@@ -1,11 +1,4 @@
 .article-preview {
-    margin: 30px;
-    background: linear-gradient(to right,
-            rgb(4, 151, 184),
-            rgb(27, 175, 27),
-            rgb(219, 219, 62),
-            rgb(230, 180, 86),
-            rgb(231, 105, 126));
     padding: 0.15rem;
     border-radius: 30px;
 }
@@ -27,7 +20,6 @@
 .article-content {
     background-color: white;
     border-radius: 25px;
-    padding: 1.2rem 1.5rem;
 }
 
 .vote-and-image {

@@ -27,27 +27,31 @@ const ArticleList = ({ articles }) => {
                         <div className="article-content">
                             <Link to={`/articles/${article.article_id}`}>
                                 <div className="title-and-date" style={{ display: 'flex', justifyContent: 'space-between', gap: '10px' }}>
-                                    <h2>{article.title}</h2>
-                                    <p>{timeSincePosted(article.created_at)}</p>
                                 </div>
-                                <p>{article.body.length > 500 ? `${article.body.substring(0, 500)}...` : article.body}</p>
+                                <div className="content" style={{ display: 'flex' }}>
+                                    <div className="vote-and-image">
+                                        <img src={article.article_img_url} alt={article.title} style={{
+                                            height: 200,
+                                            width: 200,
+                                            borderRadius: '5%',
+                                            objectFit: 'cover',
+                                            boxShadow: '0 4px 6px rgba(0, 0, 0, 0.1)',
+                                            marginRight: '10px'
+                                        }} />
+                                    </div>
+                                    <div className="topic-and-title">
+                                        <h2>{article.topic.charAt(0).toUpperCase() + article.topic.slice(1)}</h2>
+                                        <hr style={{ border: '2px solid blue', width: '100%' }} />
+                                        <h2>{article.title}</h2>
+                                    </div>
+                                </div>
                             </Link>
-                            <div className="vote-and-image">
-                                <Vote id={article.article_id} initialVotes={article.votes} />
-                                <img src={article.article_img_url} alt={article.title} style={{
-                                    height: 200,
-                                    width: 200,
-                                    borderRadius: '5%',
-                                    objectFit: 'cover',
-                                    boxShadow: '0 4px 6px rgba(0, 0, 0, 0.1)',
-                                    marginRight: '10px'
-                                }} />
-                            </div>
                         </div>
+
                     </div>
                 ))
             }
-        </div>
+        </div >
     );
 };
 
