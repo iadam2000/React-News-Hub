@@ -3,8 +3,6 @@ import './css/index.css';
 import './css/Articles.css';
 import Filter from './Filter';
 import useFetch from './useFetch';
-import Vote from './Vote';
-import { timeSincePosted } from './api';
 
 const ArticleList = ({ articles }) => {
     const { data, error, isLoading } = useFetch('/topics');
