@@ -30,24 +30,24 @@ const ArticleList = ({ articles }) => {
                                     <h2>{article.title}</h2>
                                     <p>{timeSincePosted(article.created_at)}</p>
                                 </div>
-                                <p>{article.body.length > 500 ? `${article.body.substring(0, 500)}...` : article.body}</p>
+                                <p>{article.body.length > 100 ? `${article.body.substring(0, 100)}...` : article.body}</p>
+                                <div className="vote-and-image">
+                                    <Vote id={article.article_id} initialVotes={article.votes} />
+                                    <img src={article.article_img_url} alt={article.title} style={{
+                                        height: 200,
+                                        width: 200,
+                                        borderRadius: '5%',
+                                        objectFit: 'cover',
+                                        boxShadow: '0 4px 6px rgba(0, 0, 0, 0.1)',
+                                        marginRight: '10px'
+                                    }} />
+                                </div>
                             </Link>
-                            <div className="vote-and-image">
-                                <Vote id={article.article_id} initialVotes={article.votes} />
-                                <img src={article.article_img_url} alt={article.title} style={{
-                                    height: 200,
-                                    width: 200,
-                                    borderRadius: '5%',
-                                    objectFit: 'cover',
-                                    boxShadow: '0 4px 6px rgba(0, 0, 0, 0.1)',
-                                    marginRight: '10px'
-                                }} />
-                            </div>
                         </div>
                     </div>
                 ))
             }
-        </div>
+        </div >
     );
 };
 
