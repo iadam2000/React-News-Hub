@@ -73,6 +73,3 @@ git clone <repo-url>
 ```bash
    http://localhost:3000
    ```
-
-## Additional Information
-This portfolio project was created as part of a Digital Skills Bootcamp in Software Engineering provided by Northcoders.
