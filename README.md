@@ -1,3 +1,7 @@
+## 🌐 Hosted Version
+
+You can access the live version of the API here:  
+🔗 **[Backend Project Live API](ibraheems-articlex.netlify.app/)**
 
 ## 🧭 General Info
 
