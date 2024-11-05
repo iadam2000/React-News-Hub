@@ -1,1 +1,15 @@
+name: Keep Supabase Alive
 
+on:
+  schedule:
+    - cron: '*/15 * * * *'  # Runs every 15 minutes
+
+jobs:
+  pingSupabase:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Make request to Supabase
+        run: |
+          curl -X GET "https://inkpgijddvxdrvqfasjc.supabase.co/rest/v1/articles" \
+          -H "apikey: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Imlua3BnaWpkZHZ4ZHJ2cWZhc2pjIiwicm9sZSI6ImFub24iLCJpYXQiOjE3MjQ5MTg2MDgsImV4cCI6MjA0MDQ5NDYwOH0.Ln6o-FDWDk_zLpt94GZQ-pIaS1l8ez9KL6MWuFokIrs" \
+          -H "Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Imlua3BnaWpkZHZ4ZHJ2cWZhc2pjIiwicm9sZSI6ImFub24iLCJpYXQiOjE3MjQ5MTg2MDgsImV4cCI6MjA0MDQ5NDYwOH0.Ln6o-FDWDk_zLpt94GZQ-pIaS1l8ez9KL6MWuFokIrs"
